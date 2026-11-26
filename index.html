@@ -60,7 +60,8 @@
             </div>
 
             <figure class="hero-imagen">
-<img class="foto" src="IMAGENES/alimentos-variados.jpg" alt="Pescado, brócoli, legumbres y otros alimentos variados" width="739" height="415">            </figure>
+                <img class="foto" src="IMAGENES/alimentos-variados.jpg" alt="Pescado, brócoli, legumbres y otros alimentos variados" width="739" height="415">
+            </figure>
         </section>
 
         <section class="contenedor accesos" aria-label="Explora NutriFácil">
@@ -120,7 +121,7 @@
             </div>
         </section>
 
-        <!-- HU-02: Búsqueda y Filtrado de Alimentos -->
+        <!-- HU-02: Búsqueda y Filtrado Inteligente de Alimentos -->
         <section id="alimentos" class="seccion seccion-fondo" aria-labelledby="titulo-alimentos">
             <div class="contenedor">
                 <div class="encabezado-lista">
@@ -132,20 +133,6 @@
                     <a class="enlace" href="#plan">Ver plan sugerido <span aria-hidden="true">→</span></a>
                 </div>
 
-                <fieldset class="filtros">
-<!-- HU-02: Búsqueda y Filtrado de Alimentos -->
-        <section id="alimentos" class="seccion seccion-fondo" aria-labelledby="titulo-alimentos">
-            <div class="contenedor">
-                <div class="encabezado-lista">
-                    <div>
-                        <p class="etiqueta">Elige variedad</p>
-                        <h2 id="titulo-alimentos">Alimentos con hierro</h2>
-                        <p>Explora ejemplos de alimentos e identifica opciones accesibles para tus compras.</p>
-                    </div>
-                    <a class="enlace" href="#plan">Ver plan sugerido <span aria-hidden="true">→</span></a>
-                </div>
-
-                <!-- REEMPLAZA DESDE AQUÍ -->
                 <fieldset class="filtros nf-buscador-inteligente">
                     <legend>Filtrar y buscar alimentos</legend>
 
@@ -194,7 +181,7 @@
                         <button type="button" class="nf-example-chip" data-query="opciones sin carne">opciones sin carne</button>
                     </div>
 
-                    <!-- Banner transparente de intención detectada por IA -->
+                    <!-- Banner de intención detectada por IA -->
                     <div id="ai-intent-banner" class="nf-ai-banner" role="region" aria-live="polite" hidden>
                         <div class="nf-ai-banner-text">
                             <span class="nf-badge-ai">✨ IA</span>
@@ -206,7 +193,7 @@
                         </div>
                     </div>
 
-                    <!-- Tus filtros originales de Categoría -->
+                    <!-- Filtros de Categoría -->
                     <span class="etiqueta-filtro">Categoría</span>
                     <input type="radio" name="filtro-alimento" id="filtro-todos" value="todos" checked>
                     <label for="filtro-todos">Todos</label>
@@ -219,7 +206,7 @@
                     <input type="radio" name="filtro-alimento" id="filtro-otros" value="otros">
                     <label for="filtro-otros">Otros</label>
 
-                    <!-- Tus filtros originales de Aporte de hierro -->
+                    <!-- Filtros de Aporte de hierro -->
                     <span class="etiqueta-filtro">Aporte de hierro</span>
                     <input type="radio" name="filtro-hierro" id="hierro-todos" value="todos" checked>
                     <label for="hierro-todos">Todos</label>
@@ -230,7 +217,7 @@
                     <input type="radio" name="filtro-hierro" id="hierro-fuente" value="hierro-fuente">
                     <label for="hierro-fuente">Fuente</label>
 
-                    <!-- Nuevo filtro de Presupuesto (Económicos) -->
+                    <!-- Filtro de Presupuesto -->
                     <span class="etiqueta-filtro">Presupuesto</span>
                     <div class="nf-filtro-economico-wrap">
                         <button type="button" id="filter-economic" class="nf-chip-toggle" aria-pressed="false">
@@ -244,12 +231,12 @@
                     <!-- Contador de resultados -->
                     <p id="results-count" class="nf-results-count" aria-live="polite"></p>
 
-                    <!-- Contenedor donde se renderizan las tarjetas -->
+                    <!-- Tarjetas de alimentos -->
                     <div class="lista-alimentos" id="contenedor-alimentos">
                         <!-- Generado dinámicamente por JavaScript -->
                     </div>
 
-                    <!-- Panel de Recuperación (reemplaza al antiguo #mensaje-sin-resultados) -->
+                    <!-- Panel de Recuperación cuando no hay coincidencias exactas -->
                     <div id="recovery-panel" class="nf-recovery" aria-live="polite" hidden>
                         <div class="nf-recovery-header">
                             <h3>No encontramos coincidencias exactas</h3>
@@ -265,7 +252,6 @@
                         </div>
                     </div>
                 </fieldset>
-                <!-- HASTA AQUÍ -->
             </div>
         </section>
 
@@ -320,7 +306,7 @@
             <button id="btn-cerrar-modal" class="modal-cerrar" aria-label="Cerrar ventana">&times;</button>
             <h3 id="titulo-modal">¡Bienvenido a NutriFácil!</h3>
             <p>Ingresa rápidamente con tus redes para guardar tus preferencias o explora directamente la información.</p>
-            
+
             <div class="modal-acciones">
                 <button id="btn-google" class="btn-social btn-google">
                     <span aria-hidden="true">G</span> Continuar con Google
@@ -329,7 +315,7 @@
                     <span aria-hidden="true">f</span> Continuar con Facebook
                 </button>
             </div>
-            
+
             <button id="btn-invitado" class="btn-enlace">Continuar sin registrarme</button>
         </div>
     </div>

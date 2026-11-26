@@ -133,13 +133,80 @@
                 </div>
 
                 <fieldset class="filtros">
+<!-- HU-02: Búsqueda y Filtrado de Alimentos -->
+        <section id="alimentos" class="seccion seccion-fondo" aria-labelledby="titulo-alimentos">
+            <div class="contenedor">
+                <div class="encabezado-lista">
+                    <div>
+                        <p class="etiqueta">Elige variedad</p>
+                        <h2 id="titulo-alimentos">Alimentos con hierro</h2>
+                        <p>Explora ejemplos de alimentos e identifica opciones accesibles para tus compras.</p>
+                    </div>
+                    <a class="enlace" href="#plan">Ver plan sugerido <span aria-hidden="true">→</span></a>
+                </div>
+
+                <!-- REEMPLAZA DESDE AQUÍ -->
+                <fieldset class="filtros nf-buscador-inteligente">
                     <legend>Filtrar y buscar alimentos</legend>
 
-                    <div class="buscador-contenedor">
-                        <label for="input-busqueda" class="etiqueta-filtro">Buscar por nombre o descripción:</label>
-                        <input type="search" id="input-busqueda" placeholder="Ej. lentejas, hígado, quinua..." class="input-busqueda" aria-label="Buscar alimento por nombre">
+                    <!-- Cabecera del buscador + Control IA -->
+                    <div class="nf-search-top">
+                        <label for="input-busqueda" class="etiqueta-filtro">Buscar por nombre, beneficio o necesidad:</label>
+                        <label class="nf-ai-toggle">
+                            <input type="checkbox" id="ai-toggle" checked>
+                            <span>✨ Sugerencias IA</span>
+                        </label>
                     </div>
 
+                    <!-- Buscador con autocompletado -->
+                    <div class="buscador-contenedor nf-combobox-wrapper">
+                        <div class="nf-input-box">
+                            <input
+                                type="search"
+                                id="input-busqueda"
+                                class="input-busqueda"
+                                role="combobox"
+                                aria-autocomplete="list"
+                                aria-expanded="false"
+                                aria-controls="suggestions-listbox"
+                                aria-activedescendant=""
+                                placeholder='Ej. "lentejas" o "comidas para aumentar el hierro"'
+                                autocomplete="off"
+                            >
+                            <button type="button" id="clear-search-btn" class="nf-clear-btn" aria-label="Limpiar búsqueda" hidden>✕</button>
+                        </div>
+
+                        <!-- Desplegable de sugerencias mientras escribe -->
+                        <div id="suggestions-panel" class="nf-suggestions-panel" hidden>
+                            <ul id="suggestions-listbox" role="listbox" class="nf-suggestions-list"></ul>
+                            <div class="nf-suggestions-footer">
+                                <span>Usa ↑ ↓ y Enter para elegir</span>
+                                <button type="button" id="ignore-suggestions-btn" class="nf-link-btn">Ignorar (Esc)</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chips de consultas de ejemplo -->
+                    <div class="nf-quick-queries" aria-label="Ejemplos de búsqueda">
+                        <span>Prueba buscar:</span>
+                        <button type="button" class="nf-example-chip" data-query="comidas para aumentar el hierro">comidas para aumentar el hierro</button>
+                        <button type="button" class="nf-example-chip" data-query="alimentos económicos">alimentos económicos</button>
+                        <button type="button" class="nf-example-chip" data-query="opciones sin carne">opciones sin carne</button>
+                    </div>
+
+                    <!-- Banner transparente de intención detectada por IA -->
+                    <div id="ai-intent-banner" class="nf-ai-banner" role="region" aria-live="polite" hidden>
+                        <div class="nf-ai-banner-text">
+                            <span class="nf-badge-ai">✨ IA</span>
+                            <p id="ai-intent-message"></p>
+                        </div>
+                        <div class="nf-ai-banner-actions">
+                            <button type="button" id="apply-ai-intent-btn" class="nf-btn-ai-primary">Aplicar sugerencia</button>
+                            <button type="button" id="dismiss-ai-intent-btn" class="nf-btn-ai-ghost">Ignorar</button>
+                        </div>
+                    </div>
+
+                    <!-- Tus filtros originales de Categoría -->
                     <span class="etiqueta-filtro">Categoría</span>
                     <input type="radio" name="filtro-alimento" id="filtro-todos" value="todos" checked>
                     <label for="filtro-todos">Todos</label>
@@ -152,6 +219,7 @@
                     <input type="radio" name="filtro-alimento" id="filtro-otros" value="otros">
                     <label for="filtro-otros">Otros</label>
 
+                    <!-- Tus filtros originales de Aporte de hierro -->
                     <span class="etiqueta-filtro">Aporte de hierro</span>
                     <input type="radio" name="filtro-hierro" id="hierro-todos" value="todos" checked>
                     <label for="hierro-todos">Todos</label>
@@ -162,14 +230,42 @@
                     <input type="radio" name="filtro-hierro" id="hierro-fuente" value="hierro-fuente">
                     <label for="hierro-fuente">Fuente</label>
 
+                    <!-- Nuevo filtro de Presupuesto (Económicos) -->
+                    <span class="etiqueta-filtro">Presupuesto</span>
+                    <div class="nf-filtro-economico-wrap">
+                        <button type="button" id="filter-economic" class="nf-chip-toggle" aria-pressed="false">
+                            💰 Solo alimentos económicos
+                        </button>
+                        <button type="button" id="reset-filters-btn" class="nf-link-btn" hidden>
+                            Limpiar filtros
+                        </button>
+                    </div>
+
+                    <!-- Contador de resultados -->
+                    <p id="results-count" class="nf-results-count" aria-live="polite"></p>
+
+                    <!-- Contenedor donde se renderizan las tarjetas -->
                     <div class="lista-alimentos" id="contenedor-alimentos">
                         <!-- Generado dinámicamente por JavaScript -->
                     </div>
 
-                    <p id="mensaje-sin-resultados" class="mensaje-oculto" aria-live="polite">
-                        No se encontraron alimentos que coincidan con los criterios seleccionados.
-                    </p>
+                    <!-- Panel de Recuperación (reemplaza al antiguo #mensaje-sin-resultados) -->
+                    <div id="recovery-panel" class="nf-recovery" aria-live="polite" hidden>
+                        <div class="nf-recovery-header">
+                            <h3>No encontramos coincidencias exactas</h3>
+                            <p id="recovery-reason"></p>
+                            <div id="recovery-actions" class="nf-recovery-actions"></div>
+                        </div>
+                        <div class="nf-recovery-alternatives">
+                            <div class="nf-recovery-alt-title">
+                                <span class="nf-badge-ai">✨ Sugerido por IA</span>
+                                <h4>Alternativas cercanas que podrían servirte</h4>
+                            </div>
+                            <div id="recovery-grid" class="lista-alimentos"></div>
+                        </div>
+                    </div>
                 </fieldset>
+                <!-- HASTA AQUÍ -->
             </div>
         </section>
 

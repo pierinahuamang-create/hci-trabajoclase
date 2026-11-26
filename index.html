@@ -1,669 +1,334 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
-
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Aprende sobre la anemia, explora alimentos con hierro y consulta ideas sencillas para tus comidas.">
-
-  <meta name="theme-color" content="#087b4b">
-
-  <title>NutriFácil | Salud y bienestar</title>
-
-  <link rel="stylesheet" href="styles.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende sobre la anemia, explora alimentos con hierro y consulta ideas sencillas para tus comidas.">
+    <meta name="theme-color" content="#087b4b">
+    <title>NutriFácil | Salud y bienestar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-
-
 <body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
 
-  <a class="saltar" href="#contenido">Saltar al contenido</a>
+    <header class="cabecera">
+        <div class="contenedor barra">
+            <a class="marca" href="#inicio" aria-label="NutriFácil, ir al inicio">
+                <span class="marca-ods" aria-hidden="true">3</span>
+                <span><strong>NutriFácil</strong><small>Cuida tu salud, pequeñas decisiones</small></span>
+            </a>
 
+            <div id="usuario-badge" class="usuario-badge" style="display: none;">
+                <span id="usuario-nombre">Hola, Usuario</span>
+                <button id="btn-logout" class="btn-logout">Cerrar sesión</button>
+            </div>
 
+            <nav aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="#anemia">Aprende</a></li>
+                    <li>
+                        <details class="desplegable">
+                            <summary>Explora</summary>
+                            <ul class="submenu">
+                                <li><a href="#alimentos">Alimentos con hierro</a></li>
+                                <li><a href="#anemia">Síntomas de anemia</a></li>
+                                <li><a href="#plan">Ideas para tus comidas</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="#plan">Plan semanal</a></li>
+                </ul>
+            </nav>
 
-  <header class="cabecera">
+            <a class="boton boton-cabecera" href="#plan">Empieza ahora <span aria-hidden="true">→</span></a>
+        </div>
+    </header>
 
-    <div class="contenedor barra">
+    <main id="contenido">
+        <section id="inicio" class="hero contenedor" aria-labelledby="titulo-principal">
+            <div class="hero-texto">
+                <p class="etiqueta"><span aria-hidden="true">●</span> Pequeños cambios, grandes resultados</p>
+                <h1 id="titulo-principal">Mejora tu alimentación y <span>ayuda a prevenir la anemia</span></h1>
+                <p class="bajada">Aprende qué es la anemia, reconoce algunos síntomas y descubre alimentos con hierro para sumar a tus comidas.</p>
+                <div class="acciones">
+                    <a class="boton" href="#anemia"><span aria-hidden="true">▤</span> Aprende sobre la anemia <span aria-hidden="true">→</span></a>
+                    <a class="boton boton-claro" href="#alimentos"><span aria-hidden="true">✦</span> Descubre alimentos con hierro</a>
+                </div>
+                <p class="nota-acceso"><span aria-hidden="true">✓</span> Información abierta: no necesitas registrarte.</p>
+            </div>
 
-      <a class="marca" href="#inicio" aria-label="NutriFácil, ir al inicio">
+            <figure class="hero-imagen">
+                <img class="foto" src="IMAGENES/alimentos-variados.jpg" alt="Pescado, brócoli, legumbres y otros alimentos variados" width="739" height="415">
+            </figure>
+        </section>
 
-        <span class="marca-ods" aria-hidden="true">3</span>
+        <section class="contenedor accesos" aria-label="Explora NutriFácil">
+            <a class="acceso acceso-azul" href="#anemia">
+                <span class="acceso-icono" aria-hidden="true">▤</span>
+                <span><strong>Aprende sobre la anemia</strong><small>Conoce qué es y algunos síntomas frecuentes.</small></span>
+                <span class="flecha" aria-hidden="true">›</span>
+            </a>
+            <a class="acceso acceso-verde" href="#alimentos">
+                <span class="acceso-icono" aria-hidden="true">✳</span>
+                <span><strong>Descubre alimentos ricos en hierro</strong><small>Explora opciones para tus comidas.</small></span>
+                <span class="flecha" aria-hidden="true">›</span>
+            </a>
+            <a class="acceso acceso-dorado" href="#plan">
+                <span class="acceso-icono" aria-hidden="true">♡</span>
+                <span><strong>Recibe recomendaciones</strong><small>Consulta ideas para desayuno, almuerzo y cena.</small></span>
+                <span class="flecha" aria-hidden="true">›</span>
+            </a>
+        </section>
 
-        <span><strong>NutriFácil</strong><small>Cuida tu salud, pequeñas decisiones</small></span>
+        <section id="anemia" class="seccion contenedor" aria-labelledby="titulo-anemia">
+            <div class="seccion-encabezado">
+                <p class="etiqueta">Conoce para cuidarte</p>
+                <h2 id="titulo-anemia">¿Qué es la anemia?</h2>
+                <p>La anemia ocurre cuando la sangre no tiene suficientes glóbulos rojos sanos o hemoglobina para transportar el oxígeno que el cuerpo necesita. La falta de hierro es una causa frecuente, pero no la única.</p>
+            </div>
 
-      </a>
+            <div class="anemia-contenido">
+                <div class="sintomas">
+                    <h3>Algunas señales que podrías notar</h3>
+                    <div class="tarjetas-sintomas">
+                        <article class="tarjeta-sintoma">
+                            <span aria-hidden="true">↗</span>
+                            <h4>Cansancio o debilidad</h4>
+                            <p>Sentirte con menos energía de lo habitual.</p>
+                        </article>
+                        <article class="tarjeta-sintoma">
+                            <span aria-hidden="true">◎</span>
+                            <h4>Dificultad para concentrarte</h4>
+                            <p>Notar que te cuesta mantener la atención.</p>
+                        </article>
+                        <article class="tarjeta-sintoma">
+                            <span aria-hidden="true">♡</span>
+                            <h4>Mareos o palidez</h4>
+                            <p>Son señales posibles, entre muchas otras.</p>
+                        </article>
+                    </div>
+                    <a class="boton" href="#alimentos">Siguiente: descubre alimentos <span aria-hidden="true">→</span></a>
+                </div>
 
+                <aside class="aviso-salud">
+                    <span class="aviso-icono" aria-hidden="true">♡</span>
+                    <h3>La información ayuda, un diagnóstico lo hace un profesional.</h3>
+                    <p>Estos síntomas pueden tener distintas causas. Si te preocupan, conversa con un profesional de salud. Esta guía es educativa y no reemplaza una evaluación médica.</p>
+                    <p class="aviso-nota">No te automediques ni tomes suplementos de hierro sin indicación profesional.</p>
+                </aside>
+            </div>
+        </section>
 
+        <!-- HU-02: Búsqueda y Filtrado Inteligente de Alimentos -->
+        <section id="alimentos" class="seccion seccion-fondo" aria-labelledby="titulo-alimentos">
+            <div class="contenedor">
+                <div class="encabezado-lista">
+                    <div>
+                        <p class="etiqueta">Elige variedad</p>
+                        <h2 id="titulo-alimentos">Alimentos con hierro</h2>
+                        <p>Explora ejemplos de alimentos e identifica opciones accesibles para tus compras.</p>
+                    </div>
+                    <a class="enlace" href="#plan">Ver plan sugerido <span aria-hidden="true">→</span></a>
+                </div>
 
-      <div id="usuario-badge" class="usuario-badge" style="display: none;">
+                <fieldset class="filtros nf-buscador-inteligente">
+                    <legend>Filtrar y buscar alimentos</legend>
 
-        <span id="usuario-nombre">Hola, Usuario</span>
+                    <!-- Cabecera del buscador + Control IA -->
+                    <div class="nf-search-top">
+                        <label for="input-busqueda" class="etiqueta-filtro">Buscar por nombre, beneficio o necesidad:</label>
+                        <label class="nf-ai-toggle">
+                            <input type="checkbox" id="ai-toggle" checked>
+                            <span>✨ Sugerencias IA</span>
+                        </label>
+                    </div>
 
-        <button id="btn-logout" class="btn-logout">Cerrar sesión</button>
+                    <!-- Buscador con autocompletado -->
+                    <div class="buscador-contenedor nf-combobox-wrapper">
+                        <div class="nf-input-box">
+                            <input
+                                type="search"
+                                id="input-busqueda"
+                                class="input-busqueda"
+                                role="combobox"
+                                aria-autocomplete="list"
+                                aria-expanded="false"
+                                aria-controls="suggestions-listbox"
+                                aria-activedescendant=""
+                                placeholder='Ej. "lentejas" o "comidas para aumentar el hierro"'
+                                autocomplete="off"
+                            >
+                            <button type="button" id="clear-search-btn" class="nf-clear-btn" aria-label="Limpiar búsqueda" hidden>✕</button>
+                        </div>
 
-      </div>
+                        <!-- Desplegable de sugerencias mientras escribe -->
+                        <div id="suggestions-panel" class="nf-suggestions-panel" hidden>
+                            <ul id="suggestions-listbox" role="listbox" class="nf-suggestions-list"></ul>
+                            <div class="nf-suggestions-footer">
+                                <span>Usa ↑ ↓ y Enter para elegir</span>
+                                <button type="button" id="ignore-suggestions-btn" class="nf-link-btn">Ignorar (Esc)</button>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Chips de consultas de ejemplo -->
+                    <div class="nf-quick-queries" aria-label="Ejemplos de búsqueda">
+                        <span>Prueba buscar:</span>
+                        <button type="button" class="nf-example-chip" data-query="comidas para aumentar el hierro">comidas para aumentar el hierro</button>
+                        <button type="button" class="nf-example-chip" data-query="alimentos económicos">alimentos económicos</button>
+                        <button type="button" class="nf-example-chip" data-query="opciones sin carne">opciones sin carne</button>
+                    </div>
 
+                    <!-- Banner de intención detectada por IA -->
+                    <div id="ai-intent-banner" class="nf-ai-banner" role="region" aria-live="polite" hidden>
+                        <div class="nf-ai-banner-text">
+                            <span class="nf-badge-ai">✨ IA</span>
+                            <p id="ai-intent-message"></p>
+                        </div>
+                        <div class="nf-ai-banner-actions">
+                            <button type="button" id="apply-ai-intent-btn" class="nf-btn-ai-primary">Aplicar sugerencia</button>
+                            <button type="button" id="dismiss-ai-intent-btn" class="nf-btn-ai-ghost">Ignorar</button>
+                        </div>
+                    </div>
 
-      <nav aria-label="Navegación principal">
+                    <!-- Filtros de Categoría -->
+                    <span class="etiqueta-filtro">Categoría</span>
+                    <input type="radio" name="filtro-alimento" id="filtro-todos" value="todos" checked>
+                    <label for="filtro-todos">Todos</label>
+                    <input type="radio" name="filtro-alimento" id="filtro-carnes" value="carnes">
+                    <label for="filtro-carnes">Carnes / Vísceras</label>
+                    <input type="radio" name="filtro-alimento" id="filtro-legumbres" value="legumbres">
+                    <label for="filtro-legumbres">Legumbres</label>
+                    <input type="radio" name="filtro-alimento" id="filtro-verduras" value="verduras">
+                    <label for="filtro-verduras">Verduras</label>
+                    <input type="radio" name="filtro-alimento" id="filtro-otros" value="otros">
+                    <label for="filtro-otros">Otros</label>
 
-        <ul class="menu">
+                    <!-- Filtros de Aporte de hierro -->
+                    <span class="etiqueta-filtro">Aporte de hierro</span>
+                    <input type="radio" name="filtro-hierro" id="hierro-todos" value="todos" checked>
+                    <label for="hierro-todos">Todos</label>
+                    <input type="radio" name="filtro-hierro" id="hierro-muy-alto" value="hierro-muy-alto">
+                    <label for="hierro-muy-alto">Muy alto</label>
+                    <input type="radio" name="filtro-hierro" id="hierro-alto" value="hierro-alto">
+                    <label for="hierro-alto">Alto</label>
+                    <input type="radio" name="filtro-hierro" id="hierro-fuente" value="hierro-fuente">
+                    <label for="hierro-fuente">Fuente</label>
 
-          <li><a href="#anemia">Aprende</a></li>
+                    <!-- Filtro de Presupuesto -->
+                    <span class="etiqueta-filtro">Presupuesto</span>
+                    <div class="nf-filtro-economico-wrap">
+                        <button type="button" id="filter-economic" class="nf-chip-toggle" aria-pressed="false">
+                            💰 Solo alimentos económicos
+                        </button>
+                        <button type="button" id="reset-filters-btn" class="nf-link-btn" hidden>
+                            Limpiar filtros
+                        </button>
+                    </div>
 
-          <li>
+                    <!-- Contador de resultados -->
+                    <p id="results-count" class="nf-results-count" aria-live="polite"></p>
 
-            <details class="desplegable">
+                    <!-- Tarjetas de alimentos -->
+                    <div class="lista-alimentos" id="contenedor-alimentos">
+                        <!-- Generado dinámicamente por JavaScript -->
+                    </div>
 
-              <summary>Explora</summary>
+                    <!-- Panel de Recuperación cuando no hay coincidencias exactas -->
+                    <div id="recovery-panel" class="nf-recovery" aria-live="polite" hidden>
+                        <div class="nf-recovery-header">
+                            <h3>No encontramos coincidencias exactas</h3>
+                            <p id="recovery-reason"></p>
+                            <div id="recovery-actions" class="nf-recovery-actions"></div>
+                        </div>
+                        <div class="nf-recovery-alternatives">
+                            <div class="nf-recovery-alt-title">
+                                <span class="nf-badge-ai">✨ Sugerido por IA</span>
+                                <h4>Alternativas cercanas que podrían servirte</h4>
+                            </div>
+                            <div id="recovery-grid" class="lista-alimentos"></div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </section>
 
-              <ul class="submenu">
+        <!-- HU-03: Plan Semanal -->
+        <section id="plan" class="seccion contenedor" aria-labelledby="titulo-plan">
+            <div class="plan-encabezado">
+                <div>
+                    <p class="etiqueta">Ideas sencillas para organizarte</p>
+                    <h2 id="titulo-plan">Un plan semanal sugerido</h2>
+                    <p>Elige un día para consultar ejemplos de desayuno, almuerzo y cena. Puedes adaptar las ideas a tus gustos y presupuesto.</p>
+                </div>
+                <div class="plan-icono" aria-hidden="true">▦</div>
+            </div>
 
-                <li><a href="#alimentos">Alimentos con hierro</a></li>
+            <fieldset class="selector-objetivo">
+                <legend>¿Qué te gustaría priorizar?</legend>
+                <input type="radio" name="objetivo" id="objetivo-energia" value="energia" checked>
+                <label for="objetivo-energia">Tener más energía</label>
 
-                <li><a href="#anemia">Síntomas de anemia</a></li>
+                <input type="radio" name="objetivo" id="objetivo-concentracion" value="concentracion">
+                <label for="objetivo-concentracion">Apoyar mi concentración</label>
 
-                <li><a href="#plan">Ideas para tus comidas</a></li>
+                <input type="radio" name="objetivo" id="objetivo-habitos" value="habitos">
+                <label for="objetivo-habitos">Crear hábitos saludables</label>
 
-              </ul>
+                <div class="mensajes-objetivo">
+                    <p id="mensaje-objetivo-dinamico" aria-live="polite"></p>
+                </div>
+            </fieldset>
 
-            </details>
+            <fieldset class="selector-dias">
+                <legend>Selecciona un día</legend>
+                <input type="radio" name="dia" id="dia-lunes" value="lunes" checked><label for="dia-lunes">Lun</label>
+                <input type="radio" name="dia" id="dia-martes" value="martes"><label for="dia-martes">Mar</label>
+                <input type="radio" name="dia" id="dia-miercoles" value="miercoles"><label for="dia-miercoles">Mié</label>
+                <input type="radio" name="dia" id="dia-jueves" value="jueves"><label for="dia-jueves">Jue</label>
+                <input type="radio" name="dia" id="dia-viernes" value="viernes"><label for="dia-viernes">Vie</label>
+                <input type="radio" name="dia" id="dia-sabado" value="sabado"><label for="dia-sabado">Sáb</label>
+                <input type="radio" name="dia" id="dia-domingo" value="domingo"><label for="dia-domingo">Dom</label>
 
-          </li>
+                <div class="menus-semanales" id="contenedor-menu-dia">
+                    <!-- Generado dinámicamente por JavaScript -->
+                </div>
+            </fieldset>
+            <p class="nota-plan">Este menú es un ejemplo educativo adaptado para la vida universitaria. Las necesidades alimentarias varían; consulta a un profesional si requieres orientación individualizada.</p>
+        </section>
+    </main>
 
-          <li><a href="#plan">Plan semanal</a></li>
+    <!-- Modal HU-01 -->
+    <div id="modal-auth" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="titulo-modal">
+        <div class="modal-contenido">
+            <button id="btn-cerrar-modal" class="modal-cerrar" aria-label="Cerrar ventana">&times;</button>
+            <h3 id="titulo-modal">¡Bienvenido a NutriFácil!</h3>
+            <p>Ingresa rápidamente con tus redes para guardar tus preferencias o explora directamente la información.</p>
 
-        </ul>
+            <div class="modal-acciones">
+                <button id="btn-google" class="btn-social btn-google">
+                    <span aria-hidden="true">G</span> Continuar con Google
+                </button>
+                <button id="btn-facebook" class="btn-social btn-facebook">
+                    <span aria-hidden="true">f</span> Continuar con Facebook
+                </button>
+            </div>
 
-      </nav>
-
-
-
-      <a class="boton boton-cabecera" href="#plan">Empieza ahora <span aria-hidden="true">→</span></a>
-
+            <button id="btn-invitado" class="btn-enlace">Continuar sin registrarme</button>
+        </div>
     </div>
 
-  </header>
-
-
-
-  <main id="contenido">
-
-    <section id="inicio" class="hero contenedor" aria-labelledby="titulo-principal">
-
-      <div class="hero-texto">
-
-        <p class="etiqueta"><span aria-hidden="true">●</span> Pequeños cambios, grandes resultados</p>
-
-        <h1 id="titulo-principal">Mejora tu alimentación y <span>ayuda a prevenir la anemia</span></h1>
-
-        <p class="bajada">Aprende qué es la anemia, reconoce algunos síntomas y descubre alimentos con hierro para sumar a tus comidas.</p>
-
-        <div class="acciones">
-
-          <a class="boton" href="#anemia"><span aria-hidden="true">▤</span> Aprende sobre la anemia <span aria-hidden="true">→</span></a>
-
-          <a class="boton boton-claro" href="#alimentos"><span aria-hidden="true">✦</span> Descubre alimentos con hierro</a>
-
+    <footer class="pie">
+        <div class="contenedor pie-contenido">
+            <a class="marca marca-pie" href="#inicio"><span class="marca-ods" aria-hidden="true">3</span><span><strong>NutriFácil</strong><small>ODS 3 · Salud y bienestar</small></span></a>
+            <p>Una guía educativa para tomar decisiones informadas sobre alimentación.</p>
+            <a href="#inicio">Volver al inicio ↑</a>
         </div>
+    </footer>
 
-        <p class="nota-acceso"><span aria-hidden="true">✓</span> Información abierta: no necesitas registrarte.</p>
-
-      </div>
-
-
-
-      <figure class="hero-imagen">
-
-        <img class="foto" src="IMAGENES/alimentos-variados.jpg" alt="Pescado, brócoli, legumbres y otros alimentos variados" width="739" height="415">
-
-      </figure>
-
-    </section>
-
-
-
-    <section class="contenedor accesos" aria-label="Explora NutriFácil">
-
-      <a class="acceso acceso-azul" href="#anemia">
-
-        <span class="acceso-icono" aria-hidden="true">▤</span>
-
-        <span><strong>Aprende sobre la anemia</strong><small>Conoce qué es y algunos síntomas frecuentes.</small></span>
-
-        <span class="flecha" aria-hidden="true">›</span>
-
-      </a>
-
-      <a class="acceso acceso-verde" href="#alimentos">
-
-        <span class="acceso-icono" aria-hidden="true">✳</span>
-
-        <span><strong>Descubre alimentos ricos en hierro</strong><small>Explora opciones para tus comidas.</small></span>
-
-        <span class="flecha" aria-hidden="true">›</span>
-
-      </a>
-
-      <a class="acceso acceso-dorado" href="#plan">
-
-        <span class="acceso-icono" aria-hidden="true">♡</span>
-
-        <span><strong>Recibe recomendaciones</strong><small>Consulta ideas para desayuno, almuerzo y cena.</small></span>
-
-        <span class="flecha" aria-hidden="true">›</span>
-
-      </a>
-
-    </section>
-
-
-
-    <section id="anemia" class="seccion contenedor" aria-labelledby="titulo-anemia">
-
-      <div class="seccion-encabezado">
-
-        <p class="etiqueta">Conoce para cuidarte</p>
-
-        <h2 id="titulo-anemia">¿Qué es la anemia?</h2>
-
-        <p>La anemia ocurre cuando la sangre no tiene suficientes glóbulos rojos sanos o hemoglobina para transportar el oxígeno que el cuerpo necesita. La falta de hierro es una causa frecuente, pero no la única.</p>
-
-      </div>
-
-
-
-      <div class="anemia-contenido">
-
-        <div class="sintomas">
-
-          <h3>Algunas señales que podrías notar</h3>
-
-          <div class="tarjetas-sintomas">
-
-            <article class="tarjeta-sintoma">
-
-              <span aria-hidden="true">↗</span>
-
-              <h4>Cansancio o debilidad</h4>
-
-              <p>Sentirte con menos energía de lo habitual.</p>
-
-            </article>
-
-            <article class="tarjeta-sintoma">
-
-              <span aria-hidden="true">◎</span>
-
-              <h4>Dificultad para concentrarte</h4>
-
-              <p>Notar que te cuesta mantener la atención.</p>
-
-            </article>
-
-            <article class="tarjeta-sintoma">
-
-              <span aria-hidden="true">♡</span>
-
-              <h4>Mareos o palidez</h4>
-
-              <p>Son señales posibles, entre muchas otras.</p>
-
-            </article>
-
-          </div>
-
-          <a class="boton" href="#alimentos">Siguiente: descubre alimentos <span aria-hidden="true">→</span></a>
-
-        </div>
-
-
-
-        <aside class="aviso-salud">
-
-          <span class="aviso-icono" aria-hidden="true">♡</span>
-
-          <h3>La información ayuda, un diagnóstico lo hace un profesional.</h3>
-
-          <p>Estos síntomas pueden tener distintas causas. Si te preocupan, conversa con un profesional de salud. Esta guía es educativa y no reemplaza una evaluación médica.</p>
-
-          <p class="aviso-nota">No te automediques ni tomes suplementos de hierro sin indicación profesional.</p>
-
-        </aside>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- HU-02: Búsqueda y Filtrado Inteligente de Alimentos -->
-
-    <section id="alimentos" class="seccion seccion-fondo" aria-labelledby="titulo-alimentos">
-
-      <div class="contenedor">
-
-        <div class="encabezado-lista">
-
-          <div>
-
-            <p class="etiqueta">Elige variedad</p>
-
-            <h2 id="titulo-alimentos">Alimentos con hierro</h2>
-
-            <p>Explora ejemplos de alimentos e identifica opciones accesibles para tus compras.</p>
-
-          </div>
-
-          <a class="enlace" href="#plan">Ver plan sugerido <span aria-hidden="true">→</span></a>
-
-        </div>
-
-
-
-        <fieldset class="filtros nf-buscador-inteligente">
-
-          <legend>Filtrar y buscar alimentos</legend>
-
-
-
-          <!-- Cabecera del buscador + Control IA -->
-
-          <div class="nf-search-top">
-
-            <label for="input-busqueda" class="etiqueta-filtro">Buscar por nombre, beneficio o necesidad:</label>
-
-            <label class="nf-ai-toggle">
-
-              <input type="checkbox" id="ai-toggle" checked>
-
-              <span>✨ Sugerencias IA</span>
-
-            </label>
-
-          </div>
-
-
-
-          <!-- Buscador con autocompletado -->
-
-          <div class="buscador-contenedor nf-combobox-wrapper">
-
-            <div class="nf-input-box">
-
-              <input
-
-                type="search"
-
-                id="input-busqueda"
-
-                class="input-busqueda"
-
-                role="combobox"
-
-                aria-autocomplete="list"
-
-                aria-expanded="false"
-
-                aria-controls="suggestions-listbox"
-
-                aria-activedescendant=""
-
-                placeholder='Ej. "lentejas" o "comidas para aumentar el hierro"'
-
-                autocomplete="off"
-
-              >
-
-              <button type="button" id="clear-search-btn" class="nf-clear-btn" aria-label="Limpiar búsqueda" hidden>✕</button>
-
-            </div>
-
-
-
-            <!-- Desplegable de sugerencias mientras escribe -->
-
-            <div id="suggestions-panel" class="nf-suggestions-panel" hidden>
-
-              <ul id="suggestions-listbox" role="listbox" class="nf-suggestions-list"></ul>
-
-              <div class="nf-suggestions-footer">
-
-                <span>Usa ↑ ↓ y Enter para elegir</span>
-
-                <button type="button" id="ignore-suggestions-btn" class="nf-link-btn">Ignorar (Esc)</button>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <!-- Chips de consultas de ejemplo -->
-
-          <div class="nf-quick-queries" aria-label="Ejemplos de búsqueda">
-
-            <span>Prueba buscar:</span>
-
-            <button type="button" class="nf-example-chip" data-query="comidas para aumentar el hierro">comidas para aumentar el hierro</button>
-
-            <button type="button" class="nf-example-chip" data-query="alimentos económicos">alimentos económicos</button>
-
-            <button type="button" class="nf-example-chip" data-query="opciones sin carne">opciones sin carne</button>
-
-          </div>
-
-
-
-          <!-- Banner de intención detectada por IA -->
-
-          <div id="ai-intent-banner" class="nf-ai-banner" role="region" aria-live="polite" hidden>
-
-            <div class="nf-ai-banner-text">
-
-              <span class="nf-badge-ai">✨ IA</span>
-
-              <p id="ai-intent-message"></p>
-
-            </div>
-
-            <div class="nf-ai-banner-actions">
-
-              <button type="button" id="apply-ai-intent-btn" class="nf-btn-ai-primary">Aplicar sugerencia</button>
-
-              <button type="button" id="dismiss-ai-intent-btn" class="nf-btn-ai-ghost">Ignorar</button>
-
-            </div>
-
-          </div>
-
-
-
-          <!-- Filtros de Categoría -->
-
-          <span class="etiqueta-filtro">Categoría</span>
-
-          <input type="radio" name="filtro-alimento" id="filtro-todos" value="todos" checked>
-
-          <label for="filtro-todos">Todos</label>
-
-          <input type="radio" name="filtro-alimento" id="filtro-carnes" value="carnes">
-
-          <label for="filtro-carnes">Carnes / Vísceras</label>
-
-          <input type="radio" name="filtro-alimento" id="filtro-legumbres" value="legumbres">
-
-          <label for="filtro-legumbres">Legumbres</label>
-
-          <input type="radio" name="filtro-alimento" id="filtro-verduras" value="verduras">
-
-          <label for="filtro-verduras">Verduras</label>
-
-          <input type="radio" name="filtro-alimento" id="filtro-otros" value="otros">
-
-          <label for="filtro-otros">Otros</label>
-
-
-
-          <!-- Filtros de Aporte de hierro -->
-
-          <span class="etiqueta-filtro">Aporte de hierro</span>
-
-          <input type="radio" name="filtro-hierro" id="hierro-todos" value="todos" checked>
-
-          <label for="hierro-todos">Todos</label>
-
-          <input type="radio" name="filtro-hierro" id="hierro-muy-alto" value="hierro-muy-alto">
-
-          <label for="hierro-muy-alto">Muy alto</label>
-
-          <input type="radio" name="filtro-hierro" id="hierro-alto" value="hierro-alto">
-
-          <label for="hierro-alto">Alto</label>
-
-          <input type="radio" name="filtro-hierro" id="hierro-fuente" value="hierro-fuente">
-
-          <label for="hierro-fuente">Fuente</label>
-
-
-
-          <!-- Filtro de Presupuesto -->
-
-          <span class="etiqueta-filtro">Presupuesto</span>
-
-          <div class="nf-filtro-economico-wrap">
-
-            <button type="button" id="filter-economic" class="nf-chip-toggle" aria-pressed="false">
-
-              💰 Solo alimentos económicos
-
-            </button>
-
-            <button type="button" id="reset-filters-btn" class="nf-link-btn" hidden>
-
-              Limpiar filtros
-
-            </button>
-
-          </div>
-
-
-
-          <!-- Contador de resultados -->
-
-          <p id="results-count" class="nf-results-count" aria-live="polite"></p>
-
-
-
-          <!-- Tarjetas de alimentos -->
-
-          <div class="lista-alimentos" id="contenedor-alimentos">
-
-            <!-- Generado dinámicamente por JavaScript -->
-
-          </div>
-
-
-
-          <!-- Panel de Recuperación cuando no hay coincidencias exactas -->
-
-          <div id="recovery-panel" class="nf-recovery" aria-live="polite" hidden>
-
-            <div class="nf-recovery-header">
-
-              <h3>No encontramos coincidencias exactas</h3>
-
-              <p id="recovery-reason"></p>
-
-              <div id="recovery-actions" class="nf-recovery-actions"></div>
-
-            </div>
-
-            <div class="nf-recovery-alternatives">
-
-              <div class="nf-recovery-alt-title">
-
-                <span class="nf-badge-ai">✨ Sugerido por IA</span>
-
-                <h4>Alternativas cercanas que podrían servirte</h4>
-
-              </div>
-
-              <div id="recovery-grid" class="lista-alimentos"></div>
-
-            </div>
-
-          </div>
-
-        </fieldset>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- HU-03: Plan Semanal -->
-
-    <section id="plan" class="seccion contenedor" aria-labelledby="titulo-plan">
-
-      <div class="plan-encabezado">
-
-        <div>
-
-          <p class="etiqueta">Ideas sencillas para organizarte</p>
-
-          <h2 id="titulo-plan">Un plan semanal sugerido</h2>
-
-          <p>Elige un día para consultar ejemplos de desayuno, almuerzo y cena. Puedes adaptar las ideas a tus gustos y presupuesto.</p>
-
-        </div>
-
-        <div class="plan-icono" aria-hidden="true">▦</div>
-
-      </div>
-
-
-
-      <fieldset class="selector-objetivo">
-
-        <legend>¿Qué te gustaría priorizar?</legend>
-
-        <input type="radio" name="objetivo" id="objetivo-energia" value="energia" checked>
-
-        <label for="objetivo-energia">Tener más energía</label>
-
-
-
-        <input type="radio" name="objetivo" id="objetivo-concentracion" value="concentracion">
-
-        <label for="objetivo-concentracion">Apoyar mi concentración</label>
-
-
-
-        <input type="radio" name="objetivo" id="objetivo-habitos" value="habitos">
-
-        <label for="objetivo-habitos">Crear hábitos saludables</label>
-
-
-
-        <div class="mensajes-objetivo">
-
-          <p id="mensaje-objetivo-dinamico" aria-live="polite"></p>
-
-        </div>
-
-      </fieldset>
-
-
-
-      <fieldset class="selector-dias">
-
-        <legend>Selecciona un día</legend>
-
-        <input type="radio" name="dia" id="dia-lunes" value="lunes" checked><label for="dia-lunes">Lun</label>
-
-        <input type="radio" name="dia" id="dia-martes" value="martes"><label for="dia-martes">Mar</label>
-
-        <input type="radio" name="dia" id="dia-miercoles" value="miercoles"><label for="dia-miercoles">Mié</label>
-
-        <input type="radio" name="dia" id="dia-jueves" value="jueves"><label for="dia-jueves">Jue</label>
-
-        <input type="radio" name="dia" id="dia-viernes" value="viernes"><label for="dia-viernes">Vie</label>
-
-        <input type="radio" name="dia" id="dia-sabado" value="sabado"><label for="dia-sabado">Sáb</label>
-
-        <input type="radio" name="dia" id="dia-domingo" value="domingo"><label for="dia-domingo">Dom</label>
-
-
-
-        <div class="menus-semanales" id="contenedor-menu-dia">
-
-          <!-- Generado dinámicamente por JavaScript -->
-
-        </div>
-
-      </fieldset>
-
-      <p class="nota-plan">Este menú es un ejemplo educativo adaptado para la vida universitaria. Las necesidades alimentarias varían; consulta a un profesional si requieres orientación individualizada.</p>
-
-    </section>
-
-  </main>
-
-
-
-  <!-- Modal HU-01 -->
-
-  <div id="modal-auth" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="titulo-modal">
-
-    <div class="modal-contenido">
-
-      <button id="btn-cerrar-modal" class="modal-cerrar" aria-label="Cerrar ventana">&times;</button>
-
-      <h3 id="titulo-modal">¡Bienvenido a NutriFácil!</h3>
-
-      <p>Ingresa rápidamente con tus redes para guardar tus preferencias o explora directamente la información.</p>
-
-
-
-      <div class="modal-acciones">
-
-        <button id="btn-google" class="btn-social btn-google">
-
-          <span aria-hidden="true">G</span> Continuar con Google
-
-        </button>
-
-        <button id="btn-facebook" class="btn-social btn-facebook">
-
-          <span aria-hidden="true">f</span> Continuar con Facebook
-
-        </button>
-
-      </div>
-
-
-
-      <button id="btn-invitado" class="btn-enlace">Continuar sin registrarme</button>
-
-    </div>
-
-  </div>
-
-
-
-  <footer class="pie">
-
-    <div class="contenedor pie-contenido">
-
-      <a class="marca marca-pie" href="#inicio"><span class="marca-ods" aria-hidden="true">3</span><span><strong>NutriFácil</strong><small>ODS 3 · Salud y bienestar</small></span></a>
-
-      <p>Una guía educativa para tomar decisiones informadas sobre alimentación.</p>
-
-      <a href="#inicio">Volver al inicio ↑</a>
-
-    </div>
-
-  </footer>
-
-
-
-  <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
-
-
-</html>
 
 </html>
